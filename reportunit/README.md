@@ -6,12 +6,18 @@ ReportUnit image which can be used to generate an HTML report from an NUnit XML 
 Usage
 -----
 
-To use the image, bind a folder containing your output XML and run the container with the input path as parameter and optionally an output folder or output file.
+To use the image, bind a folder containing your output XML and run the container with the input path(ie. where the NUnit XML is located) as parameter and optionally an output folder.
 
 
-	From the documentation:
-	Usage 1:  ReportUnit "path-to-folder"
-	Usage 2:  ReportUnit "input-folder" "output-folder"
-	Usage 3:  ReportUnit "input.xml" "output.html"
+	docker run -v /home/eamon/nunit-output/:/input \  
+				eamonwoortman/reportunit-docker \
+				"/input"
+
+or 
+	
+	docker run -v /home/eamon/nunitoutput/:/input \ 
+				eamonwoortman/reportunit-docker \
+				"/input" 
+				"/home/eamon/nunit-report"
 
 
