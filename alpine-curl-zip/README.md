@@ -1,6 +1,6 @@
-# aline-curl-zip
+# alpine-curl-zip
 
-An alpine:3.3 image based which has curl and zip installed
+An alpine:3.3 image which has curl and zip installed
 
 ----------
 
